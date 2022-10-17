@@ -1,0 +1,29 @@
+<h1 class="text-success text-center m-3">Welcome to menu</h1>
+<h2 class="text-danger text-center m-2">This is ! my first Angular project</h2>
+
+
+  <div
+    class="container d-flex flex-wrap border justify-content-center gap-3 p-5"
+  >
+  <div>
+    <label for="num1 col"> Number 1 :-</label>
+    <input class="col-md-8" type="number" name="num1" id="num1" required #num1 />
+  </div>
+  <div>
+    <label for="num2"> Number 2 :-</label>
+    <input class="col-md-8" type="number" name="num1" id="num2" required #num2 />
+  </div>
+    <div
+      class="border container d-flex operations flex-wrap  col-md-6 justify-content-center p-4 m-3"
+    >
+      <button class="btn btn-success col-md-8 m-2" type="" (click)="getAddition(num1.value,num2.value)" >Add</button>
+      <button class="btn btn-danger col-md-8 m-2" type="" (click)="getSub(num1.value,num2.value)">Subtract</button>
+      <button class="btn btn-primary col-md-8 m-2" type="" (click)="getMul(num1.value,num2.value)">Multiply</button>
+    </div>
+    
+    <div class="container output text-center border" [innerHTML]="re">
+    </div>
+  </div>
+
+
+<router-outlet></router-outlet>
